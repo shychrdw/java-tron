@@ -622,9 +622,9 @@ public class Args {
       }
       INSTANCE.localWitnesses.initWitnessAccountAddress();
       logger.debug("Got privateKey from cmd");
-    } else if (config.hasPath(Constant.LOCAL_WITENSS)) {
+    } else if (config.hasPath(Constant.LOCAL_WITNESS)) {
       INSTANCE.localWitnesses = new LocalWitnesses();
-      List<String> localwitness = config.getStringList(Constant.LOCAL_WITENSS);
+      List<String> localwitness = config.getStringList(Constant.LOCAL_WITNESS);
       if (localwitness.size() > 1) {
         logger.warn("localwitness size must be one, get the first one");
         localwitness = localwitness.subList(0, 1);
